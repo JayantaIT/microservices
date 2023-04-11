@@ -35,8 +35,9 @@ namespace Catalog.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Catalog.API", Version = "v1" });
             });
             //dependency injection i.e. If we want to implement CatalogContext class , we can use object of ICatalogContext interface. 
-            services.AddScoped<ICatalogContext, CatalogContext>();
-            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ICatalogContext,CatalogContext>();
+            services.AddScoped<IProductRepository,ProductRepository>();
+            services.AddHttpContextAccessor();
            
         }
 

@@ -10,7 +10,7 @@ namespace Catalog.API.Repositories
 
         public ProductRepository(ICatalogContext catalogContext)
         {
-            _catalogContext = catalogContext ?? throw new ArgumentNullException(nameof(catalogContext));
+            _catalogContext = catalogContext;
         }
 
         public async Task CreateProduct(Product product)
